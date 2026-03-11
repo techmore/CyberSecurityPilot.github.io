@@ -1,7 +1,7 @@
 title: Cyber Security Pilot
 description: From Chaos to Cadence - A modern approach to cyber security.
 url: "https://techmore.github.io"
-baseurl: ""
+baseurl: "/CyberSecurityPilot.github.io"
 github_username: techmore
 
 plugins:
