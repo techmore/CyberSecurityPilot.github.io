@@ -1,0 +1,12 @@
+title: Cyber Security Pilot
+description: From Chaos to Cadence - A modern approach to cyber security.
+url: "https://cybersecuritypilot.org"
+baseurl: ""
+github_username: techmore
+
+plugins:
+  - jekyll-seo-tag
+
+show_excerpts: false
+
+theme: null
