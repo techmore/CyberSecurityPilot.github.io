@@ -1,0 +1,132 @@
+---
+layout: default
+title: Project Management - Cyber Security Pilot
+description: Security project tracking and remediation management.
+---
+
+<div class="bg-gray-50">
+  <div class="mx-auto max-w-7xl py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="mb-8">
+        <a href="/sample" class="text-indigo-600 hover:text-indigo-500 text-sm font-medium">&larr; Back to Samples</a>
+      </div>
+      
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-2">Project Management</h1>
+      <p class="text-lg text-gray-600 mb-8">Track remediation tasks and security improvements</p>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden mb-8">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h2 class="text-xl font-semibold text-gray-900">Active Projects</h2>
+        </div>
+        <div class="px-6 py-6">
+          <div class="space-y-4">
+            <div class="border-l-4 border-red-500 pl-4 py-2">
+              <div class="flex justify-between items-center">
+                <h3 class="font-medium text-gray-900">Critical Vulnerability Remediation</h3>
+                <span class="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded">High Priority</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">3 of 5 tasks completed</p>
+              <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-red-500 h-2 rounded-full" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-yellow-500 pl-4 py-2">
+              <div class="flex justify-between items-center">
+                <h3 class="font-medium text-gray-900">CIS v8 Level 1 Compliance</h3>
+                <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Medium Priority</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">12 of 18 tasks completed</p>
+              <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-yellow-500 h-2 rounded-full" style="width: 67%"></div>
+              </div>
+            </div>
+            
+            <div class="border-l-4 border-blue-500 pl-4 py-2">
+              <div class="flex justify-between items-center">
+                <h3 class="font-medium text-gray-900">Network Segmentation Review</h3>
+                <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded">In Progress</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">5 of 20 tasks completed</p>
+              <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 25%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden mb-8">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h2 class="text-xl font-semibold text-gray-900">Remediation Tasks</h2>
+        </div>
+        <div class="px-6 py-6">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Task</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Assigned To</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Due Date</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">Apply Windows security patch KB5023702</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">IT Team</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">2026-03-15</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">Enable SMB signing on all workstations</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">IT Team</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">2026-03-20</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">Update nginx to version 1.25.0</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">DevOps</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">2026-03-12</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded">Completed</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">Implement 2FA for all admin accounts</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">Security Team</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">2026-03-25</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h2 class="text-xl font-semibold text-gray-900">Policy Templates</h2>
+        </div>
+        <div class="px-6 py-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+              <h3 class="font-medium text-gray-900">Acceptable Use Policy</h3>
+              <p class="text-sm text-gray-500 mt-1">Employee device and network usage guidelines</p>
+            </div>
+            <div class="p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+              <h3 class="font-medium text-gray-900">Data Classification Policy</h3>
+              <p class="text-sm text-gray-500 mt-1">Handling sensitive and confidential data</p>
+            </div>
+            <div class="p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+              <h3 class="font-medium text-gray-900">Incident Response Plan</h3>
+              <p class="text-sm text-gray-500 mt-1">Steps for security breach containment</p>
+            </div>
+            <div class="p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+              <h3 class="font-medium text-gray-900">Password Policy</h3>
+              <p class="text-sm text-gray-500 mt-1">Authentication requirements and rotation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
