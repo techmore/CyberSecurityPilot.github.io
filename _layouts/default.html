@@ -49,6 +49,24 @@
     </div>
   </nav>
 
+  {% if page.layout == "default" and page.url contains "/sample/" %}
+  <div class="bg-white border-b border-gray-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-12 items-center justify-between">
+        <div class="flex items-center gap-8">
+          <span class="text-sm font-medium text-gray-500">Customer Portal:</span>
+          <div class="flex space-x-6">
+            <a href="{{ site.baseurl }}/sample/website-monitoring.html" class="{% if page.url contains 'website-monitoring' %}text-indigo-600 font-medium{% else %}text-gray-600 hover:text-gray-900{% endif %} text-sm">Website-Monitoring</a>
+            <a href="{{ site.baseurl }}/sample/internal.html" class="{% if page.url contains 'internal' %}text-indigo-600 font-medium{% else %}text-gray-600 hover:text-gray-900{% endif %} text-sm">Internal</a>
+            <a href="{{ site.baseurl }}/sample/cis8.html" class="{% if page.url contains 'cis8' %}text-indigo-600 font-medium{% else %}text-gray-600 hover:text-gray-900{% endif %} text-sm">CIS8</a>
+            <a href="{{ site.baseurl }}/sample/agent.html" class="{% if page.url contains 'agent' %}text-indigo-600 font-medium{% else %}text-gray-600 hover:text-gray-900{% endif %} text-sm">Device Agent</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
   {{ content }}
 
   <footer class="bg-gray-900">
