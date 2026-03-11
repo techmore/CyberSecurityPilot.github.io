@@ -1,0 +1,126 @@
+---
+layout: default
+title: Internal Scanning - Cyber Security Pilot
+description: Internal network scanning, vulnerability assessment, and nmap scanning.
+---
+
+<div class="bg-gray-50">
+  <div class="mx-auto max-w-7xl py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-2">Internal Scanning</h1>
+      <p class="text-lg text-gray-600 mb-8">Network discovery, vulnerability scanning, and compliance validation</p>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden mb-8">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h2 class="text-xl font-semibold text-gray-900">Network Scanner</h2>
+        </div>
+        <div class="px-6 py-6">
+          <div class="space-y-4 mb-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Network Target</label>
+              <input type="text" placeholder="192.168.1.0/24 or hostname" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div class="flex gap-4">
+              <button class="px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700">Quick Scan</button>
+              <button class="px-6 py-2 bg-gray-600 text-white font-medium rounded-lg hover:bg-gray-700">Deep Scan</button>
+            </div>
+          </div>
+
+          <div class="bg-gray-900 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-green-400 font-mono text-sm">nmap -sn 192.168.1.0/24</span>
+              <span class="text-gray-500 text-sm">Ready</span>
+            </div>
+            <pre class="text-green-400 text-sm font-mono">Starting Nmap scan...
+> Scanning network: 192.168.1.0/24
+> Discovered hosts: 12
+> Scan complete.
+
+Host Status Report:
+-------------------
+192.168.1.1    gateway     [Online]
+192.168.1.10   dc01        [Online]  Ports: 53,88,389,445
+192.168.1.15  web-server  [Online]  Ports: 22,80,443
+192.168.1.20  db-server   [Online]  Ports: 22,3306,5432
+192.168.1.25  mail-server [Online]  Ports: 22,25,110,143,993,995</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden mb-8">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h2 class="text-xl font-semibold text-gray-900">Discovered Assets</h2>
+        </div>
+        <div class="px-6 py-6">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">IP Address</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Hostname</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Open Ports</th>
+                  <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Risk</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">192.168.1.10</td>
+                  <td class="px-4 py-3 text-sm text-gray-900">dc01</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">53, 88, 389, 445</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded">Low</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">192.168.1.15</td>
+                  <td class="px-4 py-3 text-sm text-gray-900">web-server</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">22, 80, 443</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded">Medium</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 text-sm text-gray-900">192.168.1.45</td>
+                  <td class="px-4 py-3 text-sm text-gray-900">workstation</td>
+                  <td class="px-4 py-3 text-sm text-gray-600">135, 139, 445</td>
+                  <td class="px-4 py-3"><span class="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded">High</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h2 class="text-xl font-semibold text-gray-900">Sample Nmap Output</h2>
+        </div>
+        <div class="px-6 py-6">
+          <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+            <pre class="text-green-400 text-sm font-mono"># Nmap Vulnerability Scan Results
+# Target: 192.168.1.0/24
+# Date: 2024-01-15
+
+Host: 192.168.1.15 (web-server)
+Port: 443 (https)
+Service: nginx/1.24.0
+
+[CRITICAL] CVE-2024-3104
+  - Nginx HTTP/2 CVE (DoS)
+  - CVSS: 9.8
+  - Remediation: Upgrade to nginx 1.25.0+
+
+[MEDIUM] CVE-2023-44487
+  - HTTP/2 Rapid Reset Attack
+  - CVSS: 7.5
+
+Host: 192.168.1.45 (workstation)
+Port: 445 (smb)
+Service: Microsoft Windows SMB
+
+[CRITICAL] CVE-2023-21716
+  - Windows SMB Remote Code Exec
+  - CVSS: 10.0
+  - Remediation: Apply KB5023702</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
